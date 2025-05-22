@@ -1,0 +1,58 @@
+Learn Node.js - Beginner Guide
+
+1. What is Node.js?
+Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser. It is built on Chrome's V8 JavaScript engine and allows developers to use JavaScript to write command line tools and server-side scripts. Node.js is ideal for building fast and scalable network applications, especially real-time applications like chat servers, APIs, and more.
+
+2. Node.js Installation
+Step-by-step installation:
+1. Visit the official website: https://nodejs.org/
+2. Download the LTS (Long Term Support) version for your operating system (Windows, macOS, or Linux).
+3. Run the installer and follow the instructions.
+4. Verify the installation:
+   Open terminal or command prompt and type:
+   node -v  (to check Node.js version)
+   npm -v   (to check Node Package Manager version)
+
+
+3. Node.js Hello World
+Create a file named 'hello.js' and write the following code:
+
+console.log('Hello, Node.js!');
+
+To run the code, open terminal and type:
+node hello.js
+
+
+4. Node.js Modules
+Modules are reusable pieces of code in Node.js. There are three types of modules:
+1. Core Modules (e.g., fs, http, path) build in module  package
+2. Local Modules (your own modules)
+3. Third-party Modules (installed via npm)
+
+Example:
+const fs = require('fs'); // Core module
+console.log('Module loaded');
+Example:
+const myLogModule = require('./Log.js'); // local module
+myLogModule.info('Node.js started');
+Example:
+npm Install Express
+const fs = require('express'); // Third- Party module
+console.log('Module loaded');
+
+
+5. Node.js File Handling
+Node.js provides the 'fs' module to interact with the file system.
+
+Example: Writing to a file
+const fs = require('fs');
+fs.writeFile('example.txt', 'Hello World!', function(err) {
+  if (err) throw err;
+  console.log('File created and saved!');
+});
+
+Example: Reading a file
+fs.readFile('example.txt', 'utf8', function(err, data) {
+  if (err) throw err;
+  console.log(data);
+});
