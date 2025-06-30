@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Details</title>
 </head>
-<body>
-    <h1>Welcome to My Server</h1>
-    
+
+<body
+    style="font-family: Arial, sans-serif; background-color: #f4f4f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+
+        ${userData.map((user, i)=>(
+
+
+
+        <div
+            style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; width: 300px; text-align: center;">
+            <h2 style="color: #333; margin-bottom: 20px;">User Profile</h2>
+            <div style="margin-bottom: 15px;">
+                <span style="font-weight: bold; color: #555;">ID:</span>
+                <span style="color: #333;">${user.id}</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <span style="font-weight: bold; color: #555;">First Name:</span>
+                <span style="color: #333;">${user.first_name}</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <span style="font-weight: bold; color: #555;">Last Name:</span>
+                <span style="color: #333;">${user.last_name}</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <span style="font-weight: bold; color: #555;">Email:</span>
+                <span style="color: #333;">${user.email}</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <span style="font-weight: bold; color: #555;">Gender:</span>
+                <span style="color: #333;">${user.gender}</span>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <span style="font-weight: bold; color: #555;">Job Title:</span>
+                <span style="color: #333;">${user.job_title}</span>
+            </div>
+        </div>
+
+        ))
+
+        }
+
+    </div>
+
 </body>
+
 </html>
